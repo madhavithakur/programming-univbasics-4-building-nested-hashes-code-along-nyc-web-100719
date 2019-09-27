@@ -5,7 +5,7 @@ def fourth_challenge
       :matriarch => {name: "Lady Montague", age: "54"},
       :hero => {name: "Romeo", age: "15", status: "alive"},
       :hero_friends => [
-        #your hashes here!
+        {name: "Benvolio", age: "17", attitude: "worried"}, {name: "Mercutio", age: "18", attitude: "hot-headed"}
       ]
    }, 
    :capulet => {
@@ -13,11 +13,20 @@ def fourth_challenge
       :matriarch => {name: "Lady Capulet", age: "51"},
       :heroine => {name: "Juliet", age: "15", status: "alive"},
       :heroine_friends => [
-        #your hashes here!
+        {name: "Steven", age: "30", attitude: "confused"}, {name: "Nurse", age: "44", attitude: "worried"}
       ]
    }
 }
 
-  
+end
+describe "fourth_challenge" do
+	it "fills out the Montague hero's friends array with" do
+    expect(fourth_challenge[:montague][:hero_friends]).to match_array([{name: "Benvolio", age: "17", attitude: "worried"}, {name: "Mercutio", age: "18", attitude: "hot-headed"}])
 
+  end
+
+  it "fills out the Capulet heroine's friends array with" do
+    expect(fourth_challenge[:capulet][:heroine_friends]).to match_array([{name: "Steven", age: "30", attitude: "confused"}, {name: "Nurse", age: "44", attitude: "worried"}])
+
+  end
 end
