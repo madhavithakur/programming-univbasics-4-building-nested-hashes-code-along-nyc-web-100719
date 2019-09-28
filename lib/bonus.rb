@@ -21,7 +21,7 @@ def bonus
   }
 
   #code your solution here:
-  def =[]
+  def []=
     
   end 
   
