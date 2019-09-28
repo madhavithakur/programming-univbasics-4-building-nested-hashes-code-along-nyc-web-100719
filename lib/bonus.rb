@@ -3,7 +3,7 @@ def bonus
    :montague => {
       :patriarch => {name: "Lord Montague", age: "53"},
       :matriarch => {name: "Lady Montague", age: "54"},
-      :hero => {name: "Romeo", age: "15", status: "alive"},
+      :hero => {name: "Romeo", age: "15", status: "dead"},
       :hero_friends => [
          {name: "Benvolio", age: "17", attitude: "worried"},
          {name: "Steven", age: "30", attitude: "confused"}
@@ -12,7 +12,7 @@ def bonus
    :capulet => {
       :patriarch => {name: "Lord Capulet", age: "50"},
       :matriarch => {name: "Lady Capulet", age: "51"},
-      :heroine => {name: "Juliet", age: "15", status: "alive"},
+      :heroine => {name: "Juliet", age: "15", status: "dead"},
       :heroine_friends => [
           {name: "Mercutio", age: "18", attitude: "hot-headed"}, 
           {name: "Nurse", age: "44", attitude: "worried"}
@@ -21,9 +21,20 @@ def bonus
   }
 
   #code your solution here:
+  def []=(status, dead)
+    status = dead  
+  end
+    
 
   
+#   describe "bonus" do
+#   # remove the 'x' from the 'xit' below to activate this test!
+# 	it "uses the []= method to change the hero and heroine's status from alive to dead" do
+#     expect(bonus[:montague][:hero][:status]).to eq("dead")
+#     expect(bonus[:capulet][:heroine][:status]).to eq("dead")
 
   #Don't touch the following line! The `bonus` method must return our newly modified epic tragedy hash
   epic_tragedy
 end
+
+
