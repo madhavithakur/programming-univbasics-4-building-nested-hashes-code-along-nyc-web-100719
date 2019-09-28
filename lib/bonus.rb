@@ -21,9 +21,11 @@ def bonus
   }
 
   #code your solution here:
-  def []=
+  def []=(key, value)
+   
+  end
     
-  end 
+
   
 #   describe "bonus" do
 #   # remove the 'x' from the 'xit' below to activate this test!
