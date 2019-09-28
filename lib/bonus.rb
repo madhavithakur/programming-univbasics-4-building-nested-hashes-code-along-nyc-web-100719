@@ -21,7 +21,7 @@ def bonus
   }
 
   #code your solution here:
-  def []=(status, value)
+  def []=(status, dead)
     :status => dead  
   end
     
